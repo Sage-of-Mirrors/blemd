@@ -109,7 +109,7 @@ class BckAnimIndex:
         self.index = br.GetSHORT()
         self.double_tangent = br.GetSHORT()  # note: are there other values than 0 or 1?
         if self.double_tangent not in (0,1):
-            log.warning(f"BckAnimIndex: unknown value of `double_tangent`: {:d}", self.double_tangent)            
+            log.warning("BckAnimIndex: unknown value of `double_tangent`: {:d}", self.double_tangent)
 
     def DumpData(self, bw):
         bw.writeShort(self.count)
